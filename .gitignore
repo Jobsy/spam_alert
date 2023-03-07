@@ -33,3 +33,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# ignore sensitive information from being committed to version control system.
+.env
