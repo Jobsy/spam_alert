@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome</title>
+    <title>Sample Payloads</title>
   </head>
   <body>
     <h1><%= @message %></h1>
-    <p>This is my custom home page.</p>
+    <h1>Sample Payloads</h1>
+    <h2>A spam report that should result in an alert</h2>
+    <pre>
+      {
+        "RecordType": "Bounce",
+        "Type": "SpamNotification",
+        "TypeCode": 512,
+        "Name": "Spam notification",
+        "Tag": "",
+        "MessageStream": "outbound",
+        "Description": "The message was delivered, but was either blocked by the user, or classified as spam, bulk mail, or had rejected content.",
+        "Email": "zaphod@example.com",
+        "From": "notifications@honeybadger.io",
+        "BouncedAt": "2023-02-27T21:41:30Z",
+      }
+    </pre>
+    <h2>A payload that should not result in an alert</h2>
+    <pre>
+      {
+        "RecordType": "Bounce",
+        "MessageStream": "outbound",
+        "Type": "HardBounce",
+        "TypeCode": 1,
+        "Name": "Hard bounce",
+        "Tag": "Test",
+        "Description": "The server was unable to deliver your message (ex: unknown user, mailbox not found).",
+        "Email": "arthur@example.com",
+        "From": "notifications@honeybadger.io",
+        "BouncedAt": "2019-11-05T16:33:54.9070259Z",
+      }
+    </pre>
   </body>
 </html>
