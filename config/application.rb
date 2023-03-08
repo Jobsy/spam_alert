@@ -18,5 +18,7 @@ module SpamAlert
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.public_file_server.enabled = true
+    config.public_file_server.root = Rails.root.join('public')
   end
 end
