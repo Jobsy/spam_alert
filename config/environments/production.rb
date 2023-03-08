@@ -87,10 +87,10 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
 
   # Allow requests to hostname
-  # config.hosts << "spamalert-production.up.railway.app"
+  config.hosts << "spamalert-production.up.railway.app"
   
   # Clear the list of allowed hosts and allow all requests
-  config.hosts.clear
+  # config.hosts.clear
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
