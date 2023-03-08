@@ -54,6 +54,12 @@ gem 'httparty'
 # Load environment variables from a file into application's environment
 gem 'dotenv'
 
+# Minify and compress your assets in production mode, which can reduce load times and improve performance
+gem 'terser'
+
+# Compress CSS using a preprocessor
+gem 'sassc-rails', '>= 2.1.2'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

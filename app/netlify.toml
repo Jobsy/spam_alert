@@ -1,4 +1,0 @@
-[build]
-  command = "rake assets:precompile"
-  publish = "public/"
-
